@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=./.github/authors_schema.json
+
+# You can optionally customize how your information shows up cookbook.openai.com over here.
+# If your information is not present here, it will be pulled from your GitHub profile.
+
+vadim-doit:
+  name: "Vadim"
+  website: "https://www.linkedin.com/in/vadimska/"
+  avatar: "https://media.licdn.com/dms/image/v2/D5603AQHEmFHINpDLFw/profile-displayphoto-crop_800_800/B56ZtBwVW4HgAM-/0/1766334749243?e=1769644800&v=beta&t=NbFjNrTMJgsgBYB_VjvTZSA4b8trQHqd5AHdyTlU9h8"
+
+philipp-doit:
+  name: "Philipp"
+  website: "https://www.linkedin.com/in/philipp-heinrich/"
+  avatar: "https://media.licdn.com/dms/image/v2/C4D03AQGMS8zuGAg-Sg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1646988970543?e=1769644800&v=beta&t=SexPzp-am59yTPxnW8lVpUS95ugBmmq0zC-DtQdDL48"
