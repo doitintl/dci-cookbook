@@ -9,7 +9,8 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://cookbook.doit.com',
-  baseUrl: '/',
+  baseUrl: '/dci-cookbook/', //gh-pages workaround
+
 
   onBrokenLinks: 'throw',
 
