@@ -1,0 +1,189 @@
+/* Custom CSS to mimic OpenAI aesthetic */
+
+:root {
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --ifm-color-primary: #10a37f;
+  /* OpenAI Green */
+  --ifm-color-primary-dark: #0d8a6a;
+  --ifm-color-primary-darker: #0c8264;
+  --ifm-color-primary-darkest: #0a6b52;
+  --ifm-color-primary-light: #15bc93;
+  --ifm-color-primary-lighter: #18c89c;
+  --ifm-color-primary-lightest: #effcf6;
+  /* Very light green hint */
+
+  --ifm-link-color: var(--ifm-color-primary);
+
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #000000;
+
+  /* Card Styling */
+  --card-border-radius: 8px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #1a1a1a;
+  /* Dark gray, not pure black? OpenAI uses light mode mostly but lets support dark */
+  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-color-primary-lightest: #1e1e1e;
+  /* Dark hero background */
+}
+
+/* Navbar simplification */
+.navbar {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: none;
+}
+
+/* Hero */
+.hero {
+  background-color: transparent !important;
+  /* Managed by module css but override here if needed */
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  text-decoration: none !important;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.card-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+  height: 100%;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.card-meta {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Typography override for clean look */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+
+/* Sidebar hidden if we want full width like openai cookbook articles often are? 
+   Actually Docusaurus docs have sidebar. Let's keep it but make it clean. */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-color-emphasis-200) !important;
+}
+
+/* Global Tag Colors */
+:root {
+  --tag-cloudflow-bg: #ffe0b2;
+  --tag-cloudflow-color: #e65100;
+
+  --tag-datahub-bg: #bbdefb;
+  --tag-datahub-color: #0d47a1;
+
+  --tag-insights-bg: #c8e6c9;
+  --tag-insights-color: #1b5e20;
+
+  --tag-agents-bg: #e1bee7;
+  --tag-agents-color: #4a148c;
+
+  --tag-ai-bg: #b2ebf2;
+  --tag-ai-color: #006064;
+
+  --tag-github-bg: #cfd8dc;
+  --tag-github-color: #263238;
+
+  --tag-default-bg: #e0e0e0;
+  --tag-default-color: #424242;
+}
+
+[data-theme='dark'] {
+  --tag-cloudflow-bg: #e65100;
+  --tag-cloudflow-color: #ffe0b2;
+
+  --tag-datahub-bg: #0d47a1;
+  --tag-datahub-color: #bbdefb;
+
+  --tag-insights-bg: #1b5e20;
+  --tag-insights-color: #c8e6c9;
+
+  --tag-agents-bg: #4a148c;
+  --tag-agents-color: #e1bee7;
+
+  --tag-ai-bg: #006064;
+  --tag-ai-color: #b2ebf2;
+
+  --tag-github-bg: #263238;
+  --tag-github-color: #cfd8dc;
+
+  --tag-default-bg: #424242;
+  --tag-default-color: #e0e0e0;
+}
+
+/* Utility Classes for Tags */
+.tag-cloudflow {
+  background-color: var(--tag-cloudflow-bg) !important;
+  color: var(--tag-cloudflow-color) !important;
+}
+
+.tag-datahub {
+  background-color: var(--tag-datahub-bg) !important;
+  color: var(--tag-datahub-color) !important;
+}
+
+.tag-insights {
+  background-color: var(--tag-insights-bg) !important;
+  color: var(--tag-insights-color) !important;
+}
+
+.tag-agents {
+  background-color: var(--tag-agents-bg) !important;
+  color: var(--tag-agents-color) !important;
+}
+
+.tag-ai {
+  background-color: var(--tag-ai-bg) !important;
+  color: var(--tag-ai-color) !important;
+}
+
+.tag-github {
+  background-color: var(--tag-github-bg) !important;
+  color: var(--tag-github-color) !important;
+}
+
+.tag-default {
+  background-color: var(--tag-default-bg) !important;
+  color: var(--tag-default-color) !important;
+}

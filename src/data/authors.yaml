@@ -1,0 +1,18 @@
+philipp-doit:
+  name: "Philipp"
+  website: "https://www.linkedin.com/in/philipp-heinrich/"
+  image_url: "https://media.licdn.com/dms/image/v2/C4D03AQGMS8zuGAg-Sg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1646988970543?e=1769644800&v=beta&t=SexPzp-am59yTPxnW8lVpUS95ugBmmq0zC-DtQdDL48"
+  page: true
+  socials:
+    linkedin: philipp-heinrich
+
+vadim-doit:
+  name: "Vadim"
+  page: true
+  website: "https://www.linkedin.com/in/vadimska/"
+  image_url: "https://media.licdn.com/dms/image/v2/D5603AQHEmFHINpDLFw/profile-displayphoto-crop_800_800/B56ZtBwVW4HgAM-/0/1766334749243?e=1769644800&v=beta&t=NbFjNrTMJgsgBYB_VjvTZSA4b8trQHqd5AHdyTlU9h8"
+
+piyush-doit:
+  name: "Piyush"
+  page: true
+  image_url: "https://media.licdn.com/dms/image/v2/C4E03AQG2_wWMdhAMWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1583358453329?e=1769644800&v=beta&t=c-vYrA9TtdKQxbGiWj1xpSGov5BApsXyoKNiAohctLY"

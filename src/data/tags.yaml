@@ -1,0 +1,11 @@
+cloudflow:
+  label: 'Cloudflow'
+  description: 'Blog posts related to the Cloudflow framework'
+
+datahub:
+  label: 'Datahub'
+  description: 'Blog posts related to the Datahub framework'
+
+insights:
+  label: 'Insights'
+  description: 'Blog posts related to the Insights framework'

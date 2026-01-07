@@ -1,0 +1,61 @@
+/* List Item Styles */
+.listLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.listLink:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    transition: background-color 0.2s ease;
+}
+
+.listLink:hover .listItem {
+    background-color: var(--ifm-color-emphasis-100);
+}
+
+.itemTitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ifm-font-color-base);
+    margin: 0;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.itemMeta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    /* Color handled by global utility classes */
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--ifm-color-emphasis-500);
+    min-width: 100px;
+    text-align: right;
+}
