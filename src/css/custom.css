@@ -1,108 +1,394 @@
-/* Custom CSS to mimic OpenAI aesthetic */
+/* Choose a darker variation of the default primary color */
 
 :root {
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --ifm-color-primary-lightest: #6a6ece;
+  --ifm-color-primary-lighter: #4f53c5;
+  --ifm-color-primary-light: #454bc3;
+  --ifm-color-primary: #3b40b5;
+  --ifm-color-primary-dark: #353aa3;
+  --ifm-color-primary-darker: #32369a;
+  --ifm-color-primary-darkest: #292d7f;
+  --ifm-color-primary-contrast-background: #e9eafc;
+  --ifm-color-primary-contrast-foreground: #07081d;
 
-  --ifm-color-primary: #10a37f;
-  /* OpenAI Green */
-  --ifm-color-primary-dark: #0d8a6a;
-  --ifm-color-primary-darker: #0c8264;
-  --ifm-color-primary-darkest: #0a6b52;
-  --ifm-color-primary-light: #15bc93;
-  --ifm-color-primary-lighter: #18c89c;
-  --ifm-color-primary-lightest: #effcf6;
-  /* Very light green hint */
+  --ifm-color-success-lightest: #6ace6a;
+  --ifm-color-success-lighter: #45c345;
+  --ifm-color-success-light: #45c345;
+  --ifm-color-success: #3bb53b;
+  --ifm-color-success-dark: #6ace6a;
+  --ifm-color-success-darker: #329a32;
+  --ifm-color-success-darkest: #297f29;
+  --ifm-color-success-contrast-background: #e9fce9;
+  --ifm-color-success-contrast-foreground: #071d07;
 
-  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-color-warning-lightest: #fddf8a;
+  --ifm-color-warning-lighter: #fddf8a;
+  --ifm-color-warning-light: #fcce4f;
+  --ifm-color-warning: #fcc631;
+  --ifm-color-warning-dark: #fcbe13;
+  --ifm-color-warning-darker: #fbba04;
+  --ifm-color-warning-darkest: #d09903;
+  --ifm-color-warning-contrast-background: #fcf7e9;
+  --ifm-color-warning-contrast-foreground: #1d1707;
 
-  --ifm-background-color: #ffffff;
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-footer-background-color: #000000;
+  --ifm-color-danger-lightest: #fd8aa8;
+  --ifm-color-danger-lighter: #fd5e86;
+  --ifm-color-danger-light: #fd5e86;
+  --ifm-color-danger: #fc3165;
+  --ifm-color-danger-dark: #fc134f;
+  --ifm-color-danger-darker: #fb0444;
+  --ifm-color-danger-darkest: #d00337;
+  --ifm-color-danger-contrast-background: #fce9ed;
+  --ifm-color-danger-contrast-foreground: #1d070c;
 
-  /* Card Styling */
-  --card-border-radius: 8px;
-  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  --ifm-color-info-lightest: #53d5d9;
+  --ifm-color-info-lighter: #37ced3;
+  --ifm-color-info-light: #2eccd0;
+  --ifm-color-info: #2ab9bd;
+  --ifm-color-info-dark: #26a7aa;
+  --ifm-color-info-darker: #249da1;
+  --ifm-color-info-darkest: #1d8284;
+  --ifm-color-info-contrast-background: #e9fcfc;
+  --ifm-color-info-contrast-foreground: #071c1d;
+
+  --ifm-alert-border-left-width: 0px;
+
+  --ifm-code-padding-horizontal: 0.2em;
+
+  /* Taken form https://infima.dev/docs/components/alert */
+
+  --ifm-color-secondary-dark: #a4a6a8;
+
+  --ifm-other-background: #fafafa;
+  --ifm-card-background-color: #ffffff;
+  --ifm-card-text-color: #000000;
+
+  /* Taken directly from the Docusaurus website */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='dark'] {
-  --ifm-background-color: #1a1a1a;
-  /* Dark gray, not pure black? OpenAI uses light mode mostly but lets support dark */
-  --ifm-navbar-background-color: #1a1a1a;
-  --ifm-color-primary-lightest: #1e1e1e;
-  /* Dark hero background */
+html[data-theme="dark"] {
+  --ifm-background-color: #1e2125;
+  --ifm-background-surface-color: #121212;
+
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-color-primary-lighter: #f6f4ff;
+  --ifm-color-primary-light: #e3deff;
+  --ifm-color-primary: #b3beff;
+  --ifm-color-primary-dark: #9988ff;
+  --ifm-color-primary-darker: #8672ff;
+  --ifm-color-primary-darkest: #4f31ff;
+
+  --ifm-other-background: #2d2d39;
+  --ifm-card-background-color: #353540;
+  --ifm-card-text-color: #ffffff;
+
+  --ifm-button-background-color: var(--ifm-color-primary);
+  --ifm-button-color: var(--ifm-background-color);
 }
 
-/* Navbar simplification */
-.navbar {
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-  box-shadow: none;
+/* Announcement bar */
+div[role="banner"] {
+  background: var(--ifm-color-info-contrast-foreground);
 }
 
-/* Hero */
-.hero {
-  background-color: transparent !important;
-  /* Managed by module css but override here if needed */
-  color: var(--ifm-font-color-base) !important;
+div[role="banner"] div + div {
+  color: var(--ifm-color-info-contrast-background);
+  font-weight: var(--ifm-font-weight-bold);
+  max-width: 90vw !important;
+  padding: 0;
+  margin: 0 auto;
+  white-space: nowrap;
 }
 
-/* Cards */
-.card {
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--card-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%;
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  text-decoration: none !important;
+/* close button (also on announcement bar) */
+.close {
+  color: var(--ifm-color-info-contrast-background);
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--card-hover-shadow);
-  border-color: var(--ifm-color-emphasis-300);
+/* Navigation bar */
+
+.navbar__link {
+  white-space: nowrap;
 }
 
-.card-link {
-  text-decoration: none !important;
-  color: inherit !important;
-  display: block;
-  height: 100%;
+/* Document tabs bar  */
+
+.tabs {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
 }
 
-.card-title {
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.4;
+/* tabs-container, see https://docusaurus.io/docs/markdown-features/tabs */
+
+.tabs-container {
+  border: 1px solid var(--ifm-toc-border-color);
+  padding: var(--ifm-global-spacing);
+  border-radius: var(--ifm-pagination-nav-border-radius);
 }
 
-.card-meta {
-  margin-top: auto;
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-600);
+/* Don't display the label "next" and "previous" */
+/* see https://infima.dev/docs/components/pagination-nav */
+
+.pagination-nav__sublabel {
+  display: none;
+}
+
+/* Code styles */
+
+code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border: none;
+}
+
+/* External links */
+
+article a[href*="//"]:not([href*="doit.com"])::after
+{
+  content: "";
+  background-color: currentColor;
+  mask: url(/icons/external-link.svg) no-repeat;
+  margin-left: 4.8px;
+  margin-right: 2.4px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+/* Zoom CSS fix */
+
+.medium-zoom-overlay,
+.medium-zoom-image {
+  z-index: 9999;
+}
+
+/* Image frames */
+
+.drop-shadow img {
+  /*
+  TODO: Figure out how to emulate existing images
+
+  margin-left: 2rem;
+  margin-right: 3rem;
+  */
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.checkerboard {
+  padding: 25px;
+  max-width: fit-content;
+  background-position:
+    0px 0px,
+    50px 50px;
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);
+}
+
+/* Customizations for the front page grid */
+
+:root {
+  --ifm-spacing-vertical-2x: calc(var(--ifm-spacing-vertical) * 2);
+  --ifm-spacing-vertical-4x: calc(var(--ifm-spacing-vertical) * 4);
+}
+
+.footer {
+  background: #000433;
+  border-width: 4px 0 0 0;
+  border-style: solid;
+  border-image: linear-gradient(90deg, rgb(59, 64, 181) 0.8%, rgb(213, 26, 78) 99.1%) 1 / 1 / 0 stretch;
+}
+
+#front-page .container,
+.footer .container {
+  padding: var(--ifm-spacing-vertical-2x) 0;
+  margin: 0 auto;
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+#front-page .container h2 {
+  margin-bottom: var(--ifm-spacing-vertical-2x);
+}
+
+#front-page .row,
+.footer .row {
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
 }
 
-/* Typography override for clean look */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  letter-spacing: -0.02em;
+#front-page .col,
+.footer .col {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
 }
 
+.footer {
+  padding: 0;
+  margin: 0;
+}
 
-/* Sidebar hidden if we want full width like openai cookbook articles often are? 
-   Actually Docusaurus docs have sidebar. Let's keep it but make it clean. */
-.theme-doc-sidebar-container {
-  border-right: 1px solid var(--ifm-color-emphasis-200) !important;
+.footer__title,
+.footer__item {
+  white-space: nowrap;
+}
+
+.footer__bottom > div {
+  margin: 0 !important;
+}
+
+.footer__bottom > div a {
+  display: block;
+}
+
+.footer__bottom img {
+  margin: 0;
+}
+
+.footer_logo {
+  max-width: 160px;
+}
+
+@media screen and (max-width: 995px) {
+  #front-page .container,
+  .footer .container {
+    width: 90vw;
+    max-width: 750px;
+  }
+
+  .footer .container {
+    overflow: hidden;
+  }
+
+  #front-page .row,
+  .footer .row {
+    flex-direction: column;
+  }
+
+  #front-page .row + .row,
+  .footer .row + .row {
+    margin-top: var(--ifm-spacing-vertical-2x);
+  }
+
+  #front-page .col + .col,
+  .footer .col + .col {
+    margin-top: var(--ifm-spacing-vertical-2x);
+  }
+
+  .footer .row {
+    float: left;
+  }
+
+  .footer__items {
+    margin-bottom: var(--ifm-heading-margin-bottom);
+  }
+
+  .footer__bottom {
+    float: right;
+    margin: 0 !important;
+  }
+}
+
+@media screen and (min-width: 996px) {
+  #front-page .row,
+  .footer .row {
+    flex-direction: row;
+  }
+
+  #front-page .row + .row,
+  .footer .row + div {
+    margin-top: var(--ifm-spacing-vertical-4x);
+  }
+
+  #front-page .col + .col,
+  .footer .col + .col {
+    margin-left: var(--ifm-spacing-vertical-4x);
+  }
+
+  #front-page .container,
+  .footer .container {
+    padding: var(--ifm-spacing-vertical-2x) var(--ifm-spacing-vertical-4x);
+  }
+}
+
+/* Footer colors */
+
+.footer {
+  --ifm-footer-background-color: var(--ifm-font-color-base);
+  --ifm-footer-color: var(--ifm-color-white);
+  --ifm-footer-link-color: var(--ifm-color-white);
+  --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+.footer a:hover {
+  color: var(--ifm-footer-link-color);
+}
+
+[data-theme="dark"] .footer {
+  --ifm-footer-background-color: var(--ifm-navbar-background-color);
+}
+
+/* DocSearch */
+
+:root {
+  --docsearch-primary-color: var(--ifm-color-primary) !important;
+  --docsearch-modal-width: 90vw;
+}
+
+.DocSearch-Modal {
+  max-width: 750px !important;
+}
+
+@media screen and (min-width: 750px) {
+  .DocSearch-Modal {
+    margin: 85px auto auto !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .DocSearch-Modal {
+    position: fixed !important;
+  }
+}
+
+.DocSearch-Button {
+  padding: 0 20px !important;
+}
+
+.DocSearch-Button:nth-child(2) {
+  /* background: #ffffff !important; */
+  height: 70px !important;
+  width: 90vw;
+  max-width: 750px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 4px !important;
+}
+
+.DocSearch-Button:nth-child(2) .DocSearch-Button-Placeholder {
+  font-size: 1.5rem !important;
+}
+
+.DocSearch-Button:nth-child(2) .DocSearch-Button:active,
+.DocSearch-Button:focus,
+.DocSearch-Button:hover {
+  color: #969faf !important;
+}
+
+/**
+ * We have a paid account and run the crawler ourselves, so we are not
+ * required to display the Algolia logo
+ */
+.DocSearch-Footer {
+  flex-direction: row !important;
+}
+
+.DocSearch-Logo {
+  display: none;
+}
+
+.menu__link.cli-deprecated {
+  opacity: 0.65;
+  text-decoration: line-through;
 }
 
 /* Global Tag Colors */
